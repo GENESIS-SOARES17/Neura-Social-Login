@@ -1,0 +1,35 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f5f9;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Watermark Layer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/logo.png"); 
+  background-size: 100px auto; 
+  background-repeat: repeat;
+  opacity: 0.03; /* Very subtle */
+  transform: rotate(-15deg) scale(1.2);
+  z-index: 0; 
+  pointer-events: none;
+}
+
+/* Professional Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #00cc6a;
+  border-radius: 10px;
+}
